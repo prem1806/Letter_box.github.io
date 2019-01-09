@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Letter Box </title>
+	<title>Letter Box</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,6 +51,7 @@
 							<li>Typography</li>
 							<li>Lettering</li>
 						</ul>
+						<button class="reset_btn">Reset</button>
 					</div>
 					<div class="style_part1">
 						<span>Scripts</span><span>Devanagari</span>
@@ -168,17 +169,31 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$(".style_part1").on("click",function(){
+				$(".reset_btn").show();
+			})
 			$(".te").on("click",function(){
 				$(".let_od,.let_ben").hide();
 				$(".let_tel").show();
+				$(".te").addClass("add_bold");
+				$(".od,.be").removeClass("add_bold");
+
 			});
 			$(".od").on("click",function(){
 				$(".let_tel,.let_ben").hide();
 				$(".let_od").show();
+				$(".od").addClass("add_bold");
+				$(".te,.be").removeClass("add_bold");
 			});
 			$(".be").on("click",function(){
 				$(".let_od,.let_tel").hide();
 				$(".let_ben").show();
+				$(".be").addClass("add_bold");
+				$(".od,.te").removeClass("add_bold");
+			});
+			$(".reset_btn").on("click",function(){
+				$(".let_od,.let_ben,let_tel").show();
+				$(".reset_btn").hide();
 			});
 
 			
