@@ -126,6 +126,9 @@ footer{
 .addres{
 	font-size: 20px;
 }
+.addres p{
+	margin-bottom: 5px;
+}
 .foot_hr{
 		border-top: dotted #808184;
 }
